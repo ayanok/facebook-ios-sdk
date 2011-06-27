@@ -23,14 +23,17 @@
  * Do not use this interface directly, instead, use method in Facebook.h
  */
 @interface FBRequest : NSObject {
-  id<FBRequestDelegate> _delegate;
-  NSString*             _url;
-  NSString*             _httpMethod;
-  NSMutableDictionary*  _params;
-  NSURLConnection*      _connection;
-  NSMutableData*        _responseText;
+    id<FBRequestDelegate> _delegate;
+    NSString*             _url;
+    NSString*             _httpMethod;
+    NSMutableDictionary*  _params;
+    NSURLConnection*      _connection;
+    NSMutableData*        _responseText;
+    BOOL                  usesBlockCallback;
 }
 
+@property (copy) void (^FBRequestCallback)(FBRequest*, id, NSError*);
+@property (nonatomic, assign)  BOOL usesBlockCallback;
 
 @property(nonatomic,assign) id<FBRequestDelegate> delegate;
 
@@ -66,6 +69,12 @@
                         httpMethod:(NSString *) httpMethod
                           delegate:(id<FBRequestDelegate>)delegate
                         requestURL:(NSString *) url;
+
++ (FBRequest*) getRequestWithParams:(NSMutableDictionary *)params 
+                         httpMethod:(NSString *)httpMethod 
+                           callback:(void(^)(FBRequest *request, id result, NSError *error)) _block
+                         requestURL:(NSString *)url;
+
 - (BOOL) loading;
 
 - (void) connect;

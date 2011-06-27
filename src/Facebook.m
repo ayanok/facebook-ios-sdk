@@ -558,6 +558,51 @@ static NSString* kSDKVersion = @"2";
               delegate:delegate];
 }
 
+- (void) requestWithGraphPath:(NSString *) _graphPath 
+                       params:(NSMutableDictionary*) _params 
+                       method:(NSString*) _method 
+                     callback:(void(^)(FBRequest *request, id result, NSError *error)) _block
+{
+    NSString * fullURL = [kGraphBaseURL stringByAppendingString:_graphPath];
+    [_params setValue:@"json" forKey:@"format"];
+    [_params setValue:kSDK forKey:@"sdk"];
+    [_params setValue:kSDKVersion forKey:@"sdk_version"];
+    if ([self isSessionValid]) {
+        [_params setValue:self.accessToken forKey:@"access_token"];
+    }
+    
+    [_request release];
+    //modify request to have block
+    _request = [[FBRequest getRequestWithParams:_params 
+                                     httpMethod:_method 
+                                       callback:_block 
+                                     requestURL:fullURL] retain];
+    [_request connect];
+}
+
+- (void) requestWithMethodName:(NSString *) _methodName 
+                     andParams:(NSMutableDictionary *) _params 
+                 andHttpMethod:(NSString *) _method 
+                      callback:(void(^)(FBRequest *request, id result, NSError *error)) _block
+{
+    NSString * fullURL = [kRestserverBaseURL stringByAppendingString:_methodName];
+    [_params setValue:@"json" forKey:@"format"];
+    [_params setValue:kSDK forKey:@"sdk"];
+    [_params setValue:kSDKVersion forKey:@"sdk_version"];
+    if ([self isSessionValid]) {
+        [_params setValue:self.accessToken forKey:@"access_token"];
+    }
+    
+    [_request release];
+    //modify request to have block
+    _request = [[FBRequest getRequestWithParams:_params 
+                                     httpMethod:_method 
+                                       callback:_block 
+                                     requestURL:fullURL] retain];
+    [_request connect];
+    
+}
+
 /**
  * Generate a UI dialog for the request action.
  *

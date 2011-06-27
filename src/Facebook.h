@@ -75,6 +75,16 @@
                      andHttpMethod:(NSString *)httpMethod
                        andDelegate:(id <FBRequestDelegate>)delegate;
 
+- (void) requestWithGraphPath:(NSString *) _graphPath 
+                       params:(NSMutableDictionary*) _params 
+                       method:(NSString*) _method 
+                     callback:(void(^)(FBRequest *request, id result, NSError *error)) _block;
+
+- (void) requestWithMethodName:(NSString *) _methodName 
+                     andParams:(NSMutableDictionary *) _params 
+                 andHttpMethod:(NSString *) _method 
+                      callback:(void(^)(FBRequest *request, id result, NSError *error)) _block;
+
 - (void)dialog:(NSString *)action
    andDelegate:(id<FBDialogDelegate>)delegate;
 

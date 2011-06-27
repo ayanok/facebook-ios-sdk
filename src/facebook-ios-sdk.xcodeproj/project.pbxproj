@@ -106,11 +106,11 @@
 			children = (
 				AE3FC32211F19C18001C05F3 /* FBDialog.bundle */,
 				AEA93B1311D52959000A4545 /* JSON */,
-				AEA93B0111D5293B000A4545 /* FBConnect.h */,
 				AEA93B0211D5293B000A4545 /* FBRequest.h */,
 				AEA93B0311D5293B000A4545 /* FBRequest.m */,
-				AEA93B0411D5293B000A4545 /* Facebook.m */,
+				AEA93B0111D5293B000A4545 /* FBConnect.h */,
 				AEA93B0511D5293B000A4545 /* Facebook.h */,
+				AEA93B0411D5293B000A4545 /* Facebook.m */,
 				AEA93B0611D5293B000A4545 /* FBLoginDialog.h */,
 				AEA93B0711D5293B000A4545 /* FBLoginDialog.m */,
 				AEA93B0811D5293B000A4545 /* FBDialog.h */,
@@ -197,7 +197,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "facebook-ios-sdk" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* facebook-ios-sdk */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";

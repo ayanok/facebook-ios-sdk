@@ -37,6 +37,9 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
             connection = _connection,
             responseText = _responseText;
 
+@synthesize FBRequestCallback = _FBRequestCallback;
+@synthesize usesBlockCallback;
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // class public
 
@@ -54,6 +57,25 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
   request.responseText = nil;
 
   return request;
+}
+
++ (FBRequest*) getRequestWithParams:(NSMutableDictionary *)params 
+                         httpMethod:(NSString *)httpMethod 
+                           callback:(void(^)(FBRequest *request, id result, NSError *error)) _block
+                         requestURL:(NSString *)url
+{
+    FBRequest* request = [[[FBRequest alloc] init] autorelease];
+    request.delegate = nil;
+    request.url = url;
+    request.httpMethod = httpMethod;
+    request.params = params;
+    request.connection = nil;
+    request.responseText = nil;
+    request.FBRequestCallback = _block;
+    request.usesBlockCallback = YES;
+    
+    
+    return request;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -248,21 +270,25 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
     [_delegate request:self didLoadRawResponse:data];
   }
 
-  if ([_delegate respondsToSelector:@selector(request:didLoad:)] ||
-      [_delegate respondsToSelector:
-          @selector(request:didFailWithError:)]) {
-    NSError* error = nil;
-    id result = [self parseJsonResponse:data error:&error];
-
-    if (error) {
-      [self failWithError:error];
-    } else if ([_delegate respondsToSelector:
-        @selector(request:didLoad:)]) {
-      [_delegate request:self didLoad:(result == nil ? data : result)];
+    if (usesBlockCallback) {
+        NSError* error = nil;
+        id result = [self parseJsonResponse:data error:&error];
+        _FBRequestCallback(self, result, error);
     }
+    else if ([_delegate respondsToSelector:@selector(request:didLoad:)] ||
+             [_delegate respondsToSelector:@selector(request:didFailWithError:)]) 
+    {
+        NSError* error = nil;
+        id result = [self parseJsonResponse:data error:&error];
 
-  }
+        if (error) {
+            [self failWithError:error];
+        } 
+        else if ([_delegate respondsToSelector:@selector(request:didLoad:)]) {
+            [_delegate request:self didLoad:(result == nil ? data : result)];
+        }
 
+    }
 }
 
 
