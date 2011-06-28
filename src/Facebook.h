@@ -45,11 +45,13 @@
 - (id)initWithAppId:(NSString *)app_id;
 
 - (void)authorize:(NSArray *)permissions
-         delegate:(id<FBSessionDelegate>)delegate;
+         delegate:(id<FBSessionDelegate>)delegate 
+shouldTrySafariOauth:(BOOL) shouldTrySafariOauth;
 
 - (void)authorize:(NSArray *)permissions
          delegate:(id<FBSessionDelegate>)delegate
-       localAppId:(NSString *)localAppId;
+       localAppId:(NSString *)localAppId
+shouldTrySafariOauth:(BOOL) shouldTrySafariOauth;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 

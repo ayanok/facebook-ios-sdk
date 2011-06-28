@@ -337,13 +337,14 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
  * Free internal structure
  */
 - (void)dealloc {
-  [_connection cancel];
-  [_connection release];
-  [_responseText release];
-  [_url release];
-  [_httpMethod release];
-  [_params release];
-  [super dealloc];
+    [_FBRequestCallback release];
+    [_connection cancel];
+    [_connection release];
+    [_responseText release];
+    [_url release];
+    [_httpMethod release];
+    [_params release];
+    [super dealloc];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////

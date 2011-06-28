@@ -157,7 +157,7 @@ static NSString* kSDKVersion = @"2";
   // her credentials in order to authorize the application.
   BOOL didOpenOtherApp = NO;
   UIDevice *device = [UIDevice currentDevice];
-  if ([device respondsToSelector:@selector(isMultitaskingSupported)] && [device isMultitaskingSupported]) {
+  if ([device respondsToSelector:@selector(isMultitaskingSupported)] && [device isMultitaskingSupported] && trySafariAuth) {
     if (tryFBAppAuth) {
       NSString *scheme = kFBAppAuthURLScheme;
       if (_localAppId) {
@@ -210,10 +210,13 @@ static NSString* kSDKVersion = @"2";
 //public
 
 - (void)authorize:(NSArray *)permissions
-         delegate:(id<FBSessionDelegate>)delegate {
+         delegate:(id<FBSessionDelegate>)delegate 
+shouldTrySafariOauth:(BOOL) shouldTrySafariOauth
+{
   [self authorize:permissions
          delegate:delegate
-       localAppId:nil];
+       localAppId:nil
+   shouldTrySafariOauth:NO];
 }
 
 /**
@@ -266,13 +269,15 @@ static NSString* kSDKVersion = @"2";
  */
 - (void)authorize:(NSArray *)permissions
          delegate:(id<FBSessionDelegate>)delegate
-       localAppId:(NSString *)localAppId {
+       localAppId:(NSString *)localAppId
+shouldTrySafariOauth:(BOOL) shouldTrySafariOauth
+{
   self.localAppId = localAppId;
   self.permissions = permissions;
 
   _sessionDelegate = delegate;
 
-  [self authorizeWithFBAppAuth:YES safariAuth:YES];
+  [self authorizeWithFBAppAuth:YES safariAuth:shouldTrySafariOauth];
 }
 
 /**
