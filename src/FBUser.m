@@ -7,7 +7,7 @@
 //
 
 #import "FBUser.h"
-#import "JSON.h"
+#import "FBPost.h"
 
 @interface FBUser (Private)
 - (void) finishedWithSuccess;
@@ -52,15 +52,17 @@
     NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
     [params setObject:@"id,name" forKey:@"fields"];
     
-    [facebook requestWithGraphPath:@"me" params:params method:@"GET" callback:^(FBRequest *request, id result, NSError *error) {
+    [facebook requestWithGraphPath:@"me" andParams:params andHttpMethod:@"GET" andDelegate:self];
+    
+    /*[facebook requestWithGraphPath:@"me" params:params method:@"GET" callback:^(FBRequest *request, id result, NSError *error) {
         if (!error) {
             NSLog(@"basic info result %@", result);
             [self loadFromDictionary:result];
         }
         else {
-            [self performSelectorOnMainThread:@selector(finishedWithError:) withObject:error waitUntilDone:YES];
+            [self performSelectorOnMainThread:@selector(finishedWithError:) withObject:error waitUntilDone:NO];
         }
-    }];
+    }];*/
 }
 
 - (void) setAccessToken:(NSString *) _accessToken {
@@ -84,7 +86,6 @@
         
         NSString *obj = [_dict objectForKey:@"id"];
         if (obj && [obj isKindOfClass:[NSString class]]) {
-            NSLog(@"setting user id");
             self.userId = obj;
         }
         
@@ -97,6 +98,13 @@
     }
 }
 
+- (void) createPost:(FBPost*) _post withCallback:(void (^)(FBPost *post, NSError *error)) _callback {
+    if (_post && facebook) {
+        _post.facebook = facebook;
+        [_post createWithCallback:_callback];
+    }
+}
+
 #pragma mark -
 #pragma mark Private Methods
 
@@ -106,6 +114,18 @@
 
 - (void) finishedWithError:(NSError*) _error {
     _FBUserCallback (self, _error);
+}
+
+#pragma mark -
+#pragma mark FBRequestDelegate
+
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+    _FBUserCallback (self, error);
+    
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    [self loadFromDictionary:result];
 }
 
 - (void) dealloc {	

@@ -11,7 +11,9 @@
 #import "FBLocation.h"
 #import "FBEmployer.h"
 
-@interface FBUser : NSObject
+@class FBPost;
+
+@interface FBUser : NSObject <FBRequestDelegate>
 {
 @public
     NSString *accessToken;
@@ -86,6 +88,7 @@
 - (void) authorizeWithPermissions:(NSArray*) _permissions delegate:(id<FBSessionDelegate>) _delegate;
 - (void) getBasicUserInfoWithCallback:(void(^)(FBUser *user, NSError* error)) _callback;
 - (void) loadFromDictionary:(NSDictionary*) _dict;
+- (void) createPost:(FBPost*) _post withCallback:(void (^)(FBPost *post, NSError *error)) _callback;
 
 
 @end

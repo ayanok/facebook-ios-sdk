@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7168BAA214015EB4008C0D07 /* FBPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 7168BAA014015EB3008C0D07 /* FBPost.h */; };
+		7168BAA314015EB4008C0D07 /* FBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 7168BAA114015EB4008C0D07 /* FBPost.m */; };
 		71F8705713FFF21000995B08 /* FBUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F8705513FFF21000995B08 /* FBUser.h */; };
 		71F8705813FFF21000995B08 /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F8705613FFF21000995B08 /* FBUser.m */; };
 		71F8705B13FFF38700995B08 /* FBLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F8705913FFF38600995B08 /* FBLocation.h */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7168BAA014015EB3008C0D07 /* FBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPost.h; sourceTree = "<group>"; };
+		7168BAA114015EB4008C0D07 /* FBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPost.m; sourceTree = "<group>"; };
 		71F8705513FFF21000995B08 /* FBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUser.h; sourceTree = "<group>"; };
 		71F8705613FFF21000995B08 /* FBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
 		71F8705913FFF38600995B08 /* FBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLocation.h; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				71F8705A13FFF38600995B08 /* FBLocation.m */,
 				71F8705D13FFF49500995B08 /* FBEmployer.h */,
 				71F8705E13FFF49500995B08 /* FBEmployer.m */,
+				7168BAA014015EB3008C0D07 /* FBPost.h */,
+				7168BAA114015EB4008C0D07 /* FBPost.m */,
 			);
 			name = "Facebook Objects";
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 				71F8705713FFF21000995B08 /* FBUser.h in Headers */,
 				71F8705B13FFF38700995B08 /* FBLocation.h in Headers */,
 				71F8705F13FFF49500995B08 /* FBEmployer.h in Headers */,
+				7168BAA214015EB4008C0D07 /* FBPost.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +266,7 @@
 				71F8705813FFF21000995B08 /* FBUser.m in Sources */,
 				71F8705C13FFF38700995B08 /* FBLocation.m in Sources */,
 				71F8706013FFF49500995B08 /* FBEmployer.m in Sources */,
+				7168BAA314015EB4008C0D07 /* FBPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +313,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
@@ -318,6 +327,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
