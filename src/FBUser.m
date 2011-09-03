@@ -50,7 +50,7 @@
     _FBUserCallback = Block_copy(_callback);
     
     NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
-    [params setObject:@"id,name" forKey:@"fields"];
+    [params setObject:@"id,name,first_name,last_name" forKey:@"fields"];
     
     [facebook requestWithGraphPath:@"me" andParams:params andHttpMethod:@"GET" andDelegate:self];
     
@@ -92,6 +92,16 @@
         obj = [_dict objectForKey:@"name"];
         if (obj && [obj isKindOfClass:[NSString class]]) {
             self.name = obj;
+        }
+        
+        obj = [_dict objectForKey:@"first_name"];
+        if (obj && [obj isKindOfClass:[NSString class]]) {
+            self.firstName = obj;
+        }
+        
+        obj = [_dict objectForKey:@"last_name"];
+        if (obj && [obj isKindOfClass:[NSString class]]) {
+            self.lastName = obj;
         }
         
         [self performSelectorOnMainThread:@selector(finishedWithSuccess) withObject:nil waitUntilDone:YES];
