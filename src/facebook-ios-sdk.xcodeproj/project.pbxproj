@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710B0E071414D528000967BE /* FBPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E051414D528000967BE /* FBPhoto.h */; };
+		710B0E081414D528000967BE /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E061414D528000967BE /* FBPhoto.m */; };
+		710B0E0D1414D82B000967BE /* FBPostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E0B1414D82B000967BE /* FBPostViewController.h */; };
+		710B0E0E1414D82B000967BE /* FBPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E0C1414D82B000967BE /* FBPostViewController.m */; };
+		710B0E121414E6F0000967BE /* FBPostView.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E101414E6F0000967BE /* FBPostView.h */; };
+		710B0E131414E6F0000967BE /* FBPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E111414E6F0000967BE /* FBPostView.m */; };
+		710B0E171414E9F0000967BE /* FBGraphicUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E151414E9F0000967BE /* FBGraphicUtils.h */; };
+		710B0E181414E9F0000967BE /* FBGraphicUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E161414E9F0000967BE /* FBGraphicUtils.m */; };
+		710B0E1B1414FB3F000967BE /* FBUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E191414FB3F000967BE /* FBUIButton.h */; };
+		710B0E1C1414FB3F000967BE /* FBUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E1A1414FB3F000967BE /* FBUIButton.m */; };
+		710B0E23141541C6000967BE /* FBUIImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E21141541C6000967BE /* FBUIImageView.h */; };
+		710B0E24141541C6000967BE /* FBUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E22141541C6000967BE /* FBUIImageView.m */; };
 		7168BAA214015EB4008C0D07 /* FBPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 7168BAA014015EB3008C0D07 /* FBPost.h */; };
 		7168BAA314015EB4008C0D07 /* FBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 7168BAA114015EB4008C0D07 /* FBPost.m */; };
+		71E8F377141BB0DB0008AA16 /* FBVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 71E8F375141BB0DB0008AA16 /* FBVideo.h */; };
+		71E8F378141BB0DB0008AA16 /* FBVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E8F376141BB0DB0008AA16 /* FBVideo.m */; };
 		71F8705713FFF21000995B08 /* FBUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F8705513FFF21000995B08 /* FBUser.h */; };
 		71F8705813FFF21000995B08 /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F8705613FFF21000995B08 /* FBUser.m */; };
 		71F8705B13FFF38700995B08 /* FBLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F8705913FFF38600995B08 /* FBLocation.h */; };
@@ -42,8 +56,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		710B0E051414D528000967BE /* FBPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPhoto.h; sourceTree = "<group>"; };
+		710B0E061414D528000967BE /* FBPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPhoto.m; sourceTree = "<group>"; };
+		710B0E0B1414D82B000967BE /* FBPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPostViewController.h; sourceTree = "<group>"; };
+		710B0E0C1414D82B000967BE /* FBPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPostViewController.m; sourceTree = "<group>"; };
+		710B0E101414E6F0000967BE /* FBPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPostView.h; sourceTree = "<group>"; };
+		710B0E111414E6F0000967BE /* FBPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPostView.m; sourceTree = "<group>"; };
+		710B0E151414E9F0000967BE /* FBGraphicUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGraphicUtils.h; sourceTree = "<group>"; };
+		710B0E161414E9F0000967BE /* FBGraphicUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGraphicUtils.m; sourceTree = "<group>"; };
+		710B0E191414FB3F000967BE /* FBUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUIButton.h; sourceTree = "<group>"; };
+		710B0E1A1414FB3F000967BE /* FBUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUIButton.m; sourceTree = "<group>"; };
+		710B0E21141541C6000967BE /* FBUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUIImageView.h; sourceTree = "<group>"; };
+		710B0E22141541C6000967BE /* FBUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUIImageView.m; sourceTree = "<group>"; };
 		7168BAA014015EB3008C0D07 /* FBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPost.h; sourceTree = "<group>"; };
 		7168BAA114015EB4008C0D07 /* FBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPost.m; sourceTree = "<group>"; };
+		71E8F375141BB0DB0008AA16 /* FBVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBVideo.h; sourceTree = "<group>"; };
+		71E8F376141BB0DB0008AA16 /* FBVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBVideo.m; sourceTree = "<group>"; };
 		71F8705513FFF21000995B08 /* FBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUser.h; sourceTree = "<group>"; };
 		71F8705613FFF21000995B08 /* FBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
 		71F8705913FFF38600995B08 /* FBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLocation.h; sourceTree = "<group>"; };
@@ -101,6 +129,7 @@
 		0867D691FE84028FC02AAC07 /* facebook-ios-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				710B0E0A1414D7D7000967BE /* FBPostViewController */,
 				71F8704A13FFE3DB00995B08 /* Facebook Objects */,
 				08FB77AEFE84172EC02AAC07 /* FBConnect */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -144,6 +173,39 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		710B0E0A1414D7D7000967BE /* FBPostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				710B0E141414E9CF000967BE /* UI Classes */,
+				710B0E0F1414E5E4000967BE /* UI Controls */,
+				710B0E0B1414D82B000967BE /* FBPostViewController.h */,
+				710B0E0C1414D82B000967BE /* FBPostViewController.m */,
+			);
+			name = FBPostViewController;
+			sourceTree = "<group>";
+		};
+		710B0E0F1414E5E4000967BE /* UI Controls */ = {
+			isa = PBXGroup;
+			children = (
+				710B0E101414E6F0000967BE /* FBPostView.h */,
+				710B0E111414E6F0000967BE /* FBPostView.m */,
+				710B0E191414FB3F000967BE /* FBUIButton.h */,
+				710B0E1A1414FB3F000967BE /* FBUIButton.m */,
+				710B0E21141541C6000967BE /* FBUIImageView.h */,
+				710B0E22141541C6000967BE /* FBUIImageView.m */,
+			);
+			name = "UI Controls";
+			sourceTree = "<group>";
+		};
+		710B0E141414E9CF000967BE /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				710B0E151414E9F0000967BE /* FBGraphicUtils.h */,
+				710B0E161414E9F0000967BE /* FBGraphicUtils.m */,
+			);
+			name = "UI Classes";
+			sourceTree = "<group>";
+		};
 		71F8704A13FFE3DB00995B08 /* Facebook Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +217,10 @@
 				71F8705E13FFF49500995B08 /* FBEmployer.m */,
 				7168BAA014015EB3008C0D07 /* FBPost.h */,
 				7168BAA114015EB4008C0D07 /* FBPost.m */,
+				710B0E051414D528000967BE /* FBPhoto.h */,
+				710B0E061414D528000967BE /* FBPhoto.m */,
+				71E8F375141BB0DB0008AA16 /* FBVideo.h */,
+				71E8F376141BB0DB0008AA16 /* FBVideo.m */,
 			);
 			name = "Facebook Objects";
 			sourceTree = "<group>";
@@ -203,6 +269,13 @@
 				71F8705B13FFF38700995B08 /* FBLocation.h in Headers */,
 				71F8705F13FFF49500995B08 /* FBEmployer.h in Headers */,
 				7168BAA214015EB4008C0D07 /* FBPost.h in Headers */,
+				710B0E071414D528000967BE /* FBPhoto.h in Headers */,
+				710B0E0D1414D82B000967BE /* FBPostViewController.h in Headers */,
+				710B0E121414E6F0000967BE /* FBPostView.h in Headers */,
+				710B0E171414E9F0000967BE /* FBGraphicUtils.h in Headers */,
+				710B0E1B1414FB3F000967BE /* FBUIButton.h in Headers */,
+				710B0E23141541C6000967BE /* FBUIImageView.h in Headers */,
+				71E8F377141BB0DB0008AA16 /* FBVideo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +340,13 @@
 				71F8705C13FFF38700995B08 /* FBLocation.m in Sources */,
 				71F8706013FFF49500995B08 /* FBEmployer.m in Sources */,
 				7168BAA314015EB4008C0D07 /* FBPost.m in Sources */,
+				710B0E081414D528000967BE /* FBPhoto.m in Sources */,
+				710B0E0E1414D82B000967BE /* FBPostViewController.m in Sources */,
+				710B0E131414E6F0000967BE /* FBPostView.m in Sources */,
+				710B0E181414E9F0000967BE /* FBGraphicUtils.m in Sources */,
+				710B0E1C1414FB3F000967BE /* FBUIButton.m in Sources */,
+				710B0E24141541C6000967BE /* FBUIImageView.m in Sources */,
+				71E8F378141BB0DB0008AA16 /* FBVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +368,7 @@
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = facebook_ios_sdk;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -302,6 +383,7 @@
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = facebook_ios_sdk;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -317,6 +399,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -331,6 +414,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

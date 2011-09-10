@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "FBUser.h"
+#import "FBPhoto.h"
+#import "FBVideo.h"
+
+/*
+    NOTE: Currently uploading video's is not supported.
+ 
+*/
 
 typedef enum {
     FBPostTypeStatus = 0,
@@ -41,6 +48,9 @@ typedef enum {
     NSInteger cntComments;
     FBPostType type;
     
+    FBPhoto *photo;
+    FBVideo *video;
+    
     Facebook *facebook;
     
     //TODO: Add Privacy
@@ -66,6 +76,8 @@ typedef enum {
 @property (nonatomic, assign) NSInteger cntLikes;
 @property (nonatomic, assign) NSInteger cntComments;
 @property (nonatomic, assign) FBPostType type;
+@property (nonatomic, retain) FBPhoto *photo;
+@property (nonatomic, retain) FBVideo *video;
 
 @property (nonatomic, retain) Facebook *facebook;
 
