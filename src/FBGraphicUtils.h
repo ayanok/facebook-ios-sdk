@@ -15,6 +15,7 @@
     
 }
 
++ (UIImage*) applicationImage:(id<UIApplicationDelegate>) _delegate frame:(CGRect) _frame;
 + (UIImageView*) applicationImageView:(id<UIApplicationDelegate>) _delegate frame:(CGRect) _frame;
 
 @end

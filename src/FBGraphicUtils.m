@@ -10,6 +10,23 @@
 
 @implementation FBGraphicUtils
 
++ (UIImage*) applicationImage:(id<UIApplicationDelegate>) _delegate frame:(CGRect) _frame {
+    UIGraphicsBeginImageContext(_delegate.window.screen.bounds.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //Screenshot
+    [_delegate.window.layer renderInContext:context];
+    
+    //Overlay
+    UIView *overlay = [[UIView alloc] initWithFrame:_frame];
+    overlay.backgroundColor = [UIColor colorWithWhite:0.0 alpha:.6];
+    [overlay.layer renderInContext:context];
+    
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return viewImage;
+}
+
 + (UIImageView*) applicationImageView:(id<UIApplicationDelegate>) _delegate frame:(CGRect) _frame {
     UIGraphicsBeginImageContext(_delegate.window.screen.bounds.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

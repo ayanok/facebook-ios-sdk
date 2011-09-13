@@ -13,6 +13,7 @@
 @class FBPostView;
 @class FBShadowView;
 @class FBUIImageView;
+@class FBBackgroundView;
 
 #define kFacebookAccessToken @"FACEBOOK-ACCESS-TOKEN"
 
@@ -28,7 +29,7 @@
     FBUser *toUser;
     NSString *accessToken;
     
-    UIImageView *backgroundView;
+    FBBackgroundView *backgroundView;
     FBUIImageView *imageView;
     FBPostView *postView;
 }

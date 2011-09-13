@@ -11,6 +11,7 @@
 #import "FBGraphicUtils.h"
 #import "FBUIButton.h"
 #import "FBUIImageView.h"
+#import "FBBackgroundView.h"
 
 @interface FBPostViewController (Private)
 - (void) handleCompletionWithError:(NSError*) _error;
@@ -31,9 +32,11 @@
         self.facebookAppId = _facebookAppId;
         
         CGRect frame = CGRectMake(0, -20, self.view.bounds.size.width, self.view.bounds.size.height+20);
-        backgroundView = [[FBGraphicUtils applicationImageView:_delegate frame:frame] retain];
+        UIImage *bgImage = [FBGraphicUtils applicationImage:_delegate frame:frame];
+        backgroundView = [[FBBackgroundView alloc] initWithFrame:frame];
+        backgroundView.imageView.image = bgImage;
         backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        backgroundView.alpha = .5;
+        backgroundView.overlay.alpha = .5;
         [self.view addSubview:backgroundView];
         
         NSInteger xloc = (self.view.bounds.size.width - 310) / 2;
@@ -205,7 +208,8 @@
     [UIView beginAnimations:@"show" context:nil];
     [UIView animateWithDuration:.3 animations:^{
         [postView.textView resignFirstResponder];
-        backgroundView.alpha = .0;
+        backgroundView.overlay.alpha = .0;
+        postView.alpha = 0.0;
         postView.transform = CGAffineTransformMakeTranslation(0, (self.view.bounds.size.height/2)); 
     } completion:^(BOOL finished) {
         if (finished) {
@@ -251,7 +255,7 @@
     [UIView beginAnimations:@"show" context:nil];
     [UIView animateWithDuration:.3 animations:^{
         postView.alpha = 1.0; 
-        backgroundView.alpha = 1.0;
+        backgroundView.overlay.alpha = 1.0;
     }];
     [UIView commitAnimations];
 }
