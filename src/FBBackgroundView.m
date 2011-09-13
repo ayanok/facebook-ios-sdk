@@ -19,7 +19,7 @@
         [self addSubview:imageView];
         
         overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-        overlay.backgroundColor = [UIColor colorWithWhite:0.0 alpha:.2];
+        overlay.backgroundColor = [UIColor colorWithWhite:0.0 alpha:.6];
         [self addSubview:overlay];
     }
     return self;

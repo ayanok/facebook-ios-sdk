@@ -17,11 +17,6 @@
     //Screenshot
     [_delegate.window.layer renderInContext:context];
     
-    //Overlay
-    UIView *overlay = [[UIView alloc] initWithFrame:_frame];
-    overlay.backgroundColor = [UIColor colorWithWhite:0.0 alpha:.6];
-    [overlay.layer renderInContext:context];
-    
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return viewImage;
