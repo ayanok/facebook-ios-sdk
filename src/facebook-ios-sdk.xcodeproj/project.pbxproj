@@ -19,6 +19,8 @@
 		710B0E1C1414FB3F000967BE /* FBUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E1A1414FB3F000967BE /* FBUIButton.m */; };
 		710B0E23141541C6000967BE /* FBUIImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 710B0E21141541C6000967BE /* FBUIImageView.h */; };
 		710B0E24141541C6000967BE /* FBUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B0E22141541C6000967BE /* FBUIImageView.m */; };
+		71462EBF1420C17C00E5B746 /* FBHiddenWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 71462EBD1420C17C00E5B746 /* FBHiddenWebView.h */; };
+		71462EC01420C17C00E5B746 /* FBHiddenWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71462EBE1420C17C00E5B746 /* FBHiddenWebView.m */; };
 		715429E4141F7AF90036BDDA /* FBBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 715429E2141F7AF80036BDDA /* FBBackgroundView.h */; };
 		715429E5141F7AF90036BDDA /* FBBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715429E3141F7AF80036BDDA /* FBBackgroundView.m */; };
 		7168BAA214015EB4008C0D07 /* FBPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 7168BAA014015EB3008C0D07 /* FBPost.h */; };
@@ -70,6 +72,8 @@
 		710B0E1A1414FB3F000967BE /* FBUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUIButton.m; sourceTree = "<group>"; };
 		710B0E21141541C6000967BE /* FBUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUIImageView.h; sourceTree = "<group>"; };
 		710B0E22141541C6000967BE /* FBUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUIImageView.m; sourceTree = "<group>"; };
+		71462EBD1420C17C00E5B746 /* FBHiddenWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHiddenWebView.h; sourceTree = "<group>"; };
+		71462EBE1420C17C00E5B746 /* FBHiddenWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHiddenWebView.m; sourceTree = "<group>"; };
 		715429E2141F7AF80036BDDA /* FBBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBBackgroundView.h; sourceTree = "<group>"; };
 		715429E3141F7AF80036BDDA /* FBBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBBackgroundView.m; sourceTree = "<group>"; };
 		7168BAA014015EB3008C0D07 /* FBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPost.h; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				710B0E22141541C6000967BE /* FBUIImageView.m */,
 				715429E2141F7AF80036BDDA /* FBBackgroundView.h */,
 				715429E3141F7AF80036BDDA /* FBBackgroundView.m */,
+				71462EBD1420C17C00E5B746 /* FBHiddenWebView.h */,
+				71462EBE1420C17C00E5B746 /* FBHiddenWebView.m */,
 			);
 			name = "UI Controls";
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 				710B0E23141541C6000967BE /* FBUIImageView.h in Headers */,
 				71E8F377141BB0DB0008AA16 /* FBVideo.h in Headers */,
 				715429E4141F7AF90036BDDA /* FBBackgroundView.h in Headers */,
+				71462EBF1420C17C00E5B746 /* FBHiddenWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +362,7 @@
 				710B0E24141541C6000967BE /* FBUIImageView.m in Sources */,
 				71E8F378141BB0DB0008AA16 /* FBVideo.m in Sources */,
 				715429E5141F7AF90036BDDA /* FBBackgroundView.m in Sources */,
+				71462EC01420C17C00E5B746 /* FBHiddenWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

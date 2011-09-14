@@ -14,6 +14,7 @@
 @class FBShadowView;
 @class FBUIImageView;
 @class FBBackgroundView;
+@class FBHiddenWebView;
 
 #define kFacebookAccessToken @"FACEBOOK-ACCESS-TOKEN"
 
@@ -32,6 +33,7 @@
     FBBackgroundView *backgroundView;
     FBUIImageView *imageView;
     FBPostView *postView;
+    FBHiddenWebView *hiddenWebView;
 }
 
 @property (nonatomic, retain) NSString *facebookAppId;

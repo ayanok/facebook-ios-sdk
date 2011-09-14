@@ -12,6 +12,7 @@
 #import "FBUIButton.h"
 #import "FBUIImageView.h"
 #import "FBBackgroundView.h"
+#import "FBHiddenWebView.h"
 
 @interface FBPostViewController (Private)
 - (void) handleCompletionWithError:(NSError*) _error;
@@ -113,6 +114,16 @@
 - (void) addURL:(NSURL*) _url {
     [post setLink:[_url absoluteString]];
     
+    if (_url) {
+        hiddenWebView = [[FBHiddenWebView alloc] initWithFrame:CGRectMake(postView.bounds.size.width - 80, 60, 70, 70) 
+                                                           url:_url];
+        hiddenWebView.hidden = YES;
+        [hiddenWebView setFBHiddenWebViewCallback:^(UIImage *image, NSError * error) {
+            if (image) {
+                imageView.image = image;
+            }
+        }];
+    }
     [self showImageView:YES];
 }
 
@@ -273,6 +284,7 @@
 }
 
 - (void) dealloc {
+    [hiddenWebView release], hiddenWebView = nil;
     [backgroundView release], backgroundView = nil;
     [imageView release], imageView = nil;
     [_FBPostViewControllerCompletionCallback release], _FBPostViewControllerCompletionCallback = nil;
