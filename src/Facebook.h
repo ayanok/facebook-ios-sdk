@@ -42,16 +42,13 @@
 @property(nonatomic, assign) id<FBSessionDelegate> sessionDelegate;
 @property(nonatomic, copy) NSString* localAppId;
 
-- (id)initWithAppId:(NSString *)app_id;
+- (id)initWithAppId:(NSString *)appId
+        andDelegate:(id<FBSessionDelegate>)delegate;
+
+- (void)authorize:(NSArray *)permissions;
 
 - (void)authorize:(NSArray *)permissions
-         delegate:(id<FBSessionDelegate>)delegate 
-shouldTrySafariOauth:(BOOL) shouldTrySafariOauth;
-
-- (void)authorize:(NSArray *)permissions
-         delegate:(id<FBSessionDelegate>)delegate
-       localAppId:(NSString *)localAppId
-shouldTrySafariOauth:(BOOL) shouldTrySafariOauth;
+       localAppId:(NSString *)localAppId;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 
@@ -76,6 +73,13 @@ shouldTrySafariOauth:(BOOL) shouldTrySafariOauth;
                          andParams:(NSMutableDictionary *)params
                      andHttpMethod:(NSString *)httpMethod
                        andDelegate:(id <FBRequestDelegate>)delegate;
+
+- (void) requestWithGraphPath:(NSString *) _graphPath 
+                     callback:(void(^)(FBRequest *request, id result, NSError *error)) _block;
+
+- (void) requestWithGraphPath:(NSString *) _graphPath 
+                       params:(NSMutableDictionary*) _params 
+                     callback:(void(^)(FBRequest *request, id result, NSError *error)) _block;
 
 - (void) requestWithGraphPath:(NSString *) _graphPath 
                        params:(NSMutableDictionary*) _params 
